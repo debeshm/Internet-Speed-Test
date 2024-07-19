@@ -14,8 +14,8 @@ def perform_speedtest():
     # Get upload and download speed
     download_speed = st.download()
     upload_speed = st.upload()
-    download_speed_mbps = download_speed / 1_000_000
-    upload_speed_mbps = upload_speed / 1_000_000
+    download_speed_mbps = download_speed / 1024 / 1024
+    upload_speed_mbps = upload_speed / 1024 / 1024
     print(f"Download Speed: {download_speed_mbps:.2f} Mbps")
     print(f"Upload Speed: {upload_speed_mbps:.2f} Mbps")
 
